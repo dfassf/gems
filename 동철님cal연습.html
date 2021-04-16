@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+    
+    let setYear = 2021;
+    let setMonth = 4; 
+    let setDay = 1; 
+    let dt = new Date(`${setYear}-${setMonth}-${setDay}`);
+    console.log(dt); //Thu Apr 01 2021 00:00:00 GMT+0900 (대한민국 표준시)
+    let arrDayStr = ['일', '월', '화', '수', '목', '금', '토'];
+
+    let day = dt.getDate();
+    console.log(day); //1
+    let month = dt.getMonth();
+    console.log(month); // 3
+    let year = dt.getFullYear();
+    console.log(year); // 2021 
+    
+    let monthTxt = String(month+1).padStart(2,0);
+    console.log(monthTxt);  // 04 string 값 
+    let dayTxt = String(day).padStart(2,0);
+    console.log(dayTxt);    // 01 string값
+    
+    let weekDay = dt.getDay(); 
+    console.log(weekDay);    // 4 요일을 가져옴 (목요일)
+    
+    let dt2 = new Date(setYear, setMonth, 0);
+    console.log(dt2); //Fri Apr 30 2021 00:00:00 GMT+0900 (대한민국 표준시)
+    let lastDay = dt2.getDate();
+    console.log(lastDay); //30 
+
+    let txt=''; 
+    for(let i=1; i<=7; i++){
+        txt+=String(i).padStart(2,0)+' ';
+    }
+    console.log(txt);  //01 02 03 04 05 06 07 
+    
+    
+    // 달력 그리기 // 
+
+    function makeCalender(y,m){
+
+        let calender =[];
+        let newCalender =[];
+
+        let start = new Date(y,m-1,1); 
+        console.log(start);
+        // 2020,3 을 넣으면 -> 3월의 첫째날이 나옴 
+        //Sun Mar 01 2020 00:00:00 GMT+0900 (대한민국 표준시)
+        let end = new Date(y,m,0);
+        console.log(end);
+        //Tue Mar 31 2020 00:00:00 GMT+0900 (대한민국 표준시)
+
+        let dayOfWeek = start.getDay(); //첫째날의 요일 얻기 
+        console.log(dayOfWeek);  // 0 
+        let endDay = end.getDate(); //마지막날의 날짜 얻기 
+        
+        let prevMonth = new Date(y,m-1,0); //전 달의 마지막 날 
+        console.log(prevMonth);
+        //Sat Feb 29 2020 00:00:00 GMT+0900 (대한민국 표준시)
+        let prevEndDay = prevMonth.getDate(); //전 달의 마지막 일
+        console.log(prevEndDay); //29 
+        
+        for(let i=0; i<endDay; i++){
+            calender[i]=String(i+1).padStart(2,0);
+            console.log(calender[i]); //01~31까지 나옴 
+        }
+
+        for(let i=0; i<dayOfWeek; i++){
+            calender.unshift("  "); 
+            
+        }
+
+        if(calender.length%7!=0){
+            console.log(calender); //length: 35 
+            nextDay = 7-calender.length%7;
+            for(let i=1; i<=nextDay; i++){
+                calender.push("  ");
+            }
+        }
+
+        for(let i=0; i<calender.length/7; i++){
+            newCalender[i]='';
+            console.log(newCalender);
+
+            for(let j=(i*7); j<(1*7)+7; j++){
+                newCalender[i]+=calender[j]+"  ";
+                //console.log(newCalender[i]);
+            }
+        }
+         
+        console.log(y+'년'+m+'월');
+        console.log("일 월 화 수 목 금 토");
+        for(m=0; m<newCalender.length; m++){
+            console.log(newCalender[m]);
+        }
+        console.log("");
+        
+    }
+
+    makeCalender(2020,3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </script>
+</body>
+</html>

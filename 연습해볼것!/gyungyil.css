@@ -1,0 +1,233 @@
+/*CSS Style sheet*/
+*{margin:0;padding:0;}
+a{text-decoration: none;}
+ul,li{list-style:none;}
+#wrap{width:100%;}
+
+#topheader{
+    width:100%;
+    height:40px;
+    background-color: crimson;
+}
+
+#topheaderbox{
+    width:1200px;
+    height:40px;
+    background-color: gray;
+    margin:0 auto;
+    
+}
+
+#topheader_left,#topheader_center,#topheader_right{
+    display: inline-block;
+    height:40px;
+    text-align: center;
+    padding:9px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color:white;
+    
+}
+
+#topheader_left{
+    width:350px;
+    
+}
+#topheader_center{
+    width:550px;
+
+}
+#topheader_right{
+    width:250px;
+}
+
+
+#header{
+    width:1200px;
+    height:102px;
+    background-color:darkgoldenrod;
+    margin:0 auto;
+    
+}
+
+#header>#logo{
+    float:left;
+    padding:20px 101px 20px 0;
+}
+
+#header>#logo>img{
+    width:176px;
+}
+
+#gnb{
+    display: inline-block;
+    height:103px;
+}
+
+#gnb>ul>li{
+    display: inline-block;
+    
+}
+
+#gnb>ul>li>a{
+    display:inline-block;
+    width:180px;
+    height:102px;
+    padding:40px 0;
+    font-weight: bold;
+    color:#004385;
+    font-size:19px;
+    text-align: center;
+}
+
+/* ==============SNB============*/
+
+
+
+#snb>span{
+    margin-right:60px;
+    float:left;
+}
+
+#header>#snb{   /* 질문 1  ?????? 왜 오른쪽만 길게???? */  /*질문2 JS visual */
+    position:absolute;
+    z-index:2;
+    width:100%;
+    height:0px;
+    overflow:hidden;
+    background-color:rgba(50,50,50,0.9);
+    clear:both;  /*float 속성 해제 */
+
+}
+
+#header>#snb.snb_navi.navi{
+    animation:slider 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slider{
+    from{height:1px;}to{height:150px;}
+}
+    
+
+#header>#snb.snb_navi.navi2{
+    animation:slider2 0.5s;
+    animation-fill-mode: backwards;
+    
+}
+
+@keyframes slider2{
+    from{height:150px;}to{height:1px;}
+}
+
+#snb>ul{
+    display: inline-block;
+    width:185px;
+    float:left;
+    
+}
+
+#snb>ul>li{
+    text-align: center;
+    
+}
+
+#snb>ul>li>a{
+    color:#afafaf;
+
+    
+
+}
+
+
+/*==========start visual===========*/
+
+
+
+#visual{
+    width:100%;
+    height:500px;
+    background-color: darkkhaki;
+    position:relative;
+    
+}
+
+#imgs>ul>li>img{
+    line-height:0;
+    display:block;    
+    
+}
+
+#imgs>ul>li{
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    display:none;
+
+}
+
+/* #imgs>ul>li.fade{animation:fadein 2s 를 아래로 옮김} */
+
+#imgs>ul>li.fade.on{ /*on넣기*/
+    display:block;
+    animation: fadein 2s;
+}
+
+@keyframes fadein{
+    from{opacity:0;}to{opacity:1;}
+}
+
+
+#visual_menu{
+    width:100%;
+    height:50px;
+    background-color: hotpink;
+    position:absolute;
+    bottom:0;
+}
+
+.visual_menu_ul{
+    width:1200px;
+    margin:0 auto;
+    height:50px;
+    background:chartreuse;
+    
+}
+
+.visual_menu_ul>li{
+    width:180px;
+    display: inline-block;
+    float:left;
+    text-align: center;
+    padding:10px;
+    margin-left:30px;
+    background-color: green;
+}
+
+
+
+
+
+
+
+/*===================Start content1==========*/
+
+#content1{
+    width:1200px;
+    height:920px;
+    background-color: darkolivegreen;
+    margin:0 auto;
+}
+
+#content2{
+    width:1200px;
+    height:430px;
+    background-color: darkslategrey;
+    margin:0 auto;
+}
+
+#footer{
+    width:100%;
+    height:177px;
+    background-color:dodgerblue;
+}

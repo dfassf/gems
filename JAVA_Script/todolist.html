@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul,li{
+            list-style:none;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        #header{
+            width:100%;
+            height:200px;
+            background:rebeccapurple;
+            padding:30px;
+            box-sizing: border-boxs;
+        }
+
+        #headertop{
+            text-align:center;
+            padding:30px;
+        }
+
+        #headertop>h1{
+            color:white;
+            font-size:40px;
+        }
+
+        #headerbottom{
+            text-align: center;
+            padding:30px;
+        }
+        
+        #textbox{
+            width:200px;
+            height:20px;
+            border:1px solid darkgray;
+            border-radius: 5px;
+            text-align: center;
+            color:grey;
+            
+        }
+
+        #btn{
+            width:20px;
+            height:20px;
+            border-radius: 20px;
+            border:1px solid darkolivegreen;
+
+            text-align: center;
+            font-size:12px;
+            cursor:pointer;
+            
+        }
+
+        #bottom{
+            text-align: center;
+            line-height:3;
+            margin-top:30px;
+        }
+
+        #delbtn{
+            width:20px;
+            height:20px;
+            margin-left:20px;
+            background-color:darkorange;
+            color:white;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id ="wrap">
+        <div id="header">
+            <div id="headertop">
+                <h1>to do list</h1>
+            </div>
+            <div id="headerbottom">
+                <input text id="textbox" value=""
+                onkeyup="if(window.event.keyCode==13){add()}">
+                <input button id="btn" value="+" onclick="add();">
+            </div>
+        </div>
+        <div id="bottom">
+            <ul id="bottom_content">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function add(){
+            textbox=document.querySelector('#textbox');
+            list=document.querySelector('#bottom_content');
+            li=document.createElement('li');
+            li.innerHTML=textbox.value;
+            list.appendChild(li);
+
+            delBtn=document.createElement('button');
+            delBtn.innerHTML='-';
+            delBtn.setAttribute('id','delbtn');
+
+            li.appendChild(delBtn);
+
+            delBtn.onclick=function(){
+                list.removeChild(this.parentNode);
+            }
+        }
+    </script>
+
+</body>
+</html>

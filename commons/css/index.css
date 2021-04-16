@@ -1,0 +1,377 @@
+/* CSS style Sheet */
+*{
+    margin:0;
+    padding:0;
+}
+ul,li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+#wrap{
+    width:100%;
+}
+#header{
+    width:1200px;
+    height:100px;
+    margin:0 auto;
+}
+
+#logo{
+    padding:20px 0 0 0;
+    float:left;
+}
+
+#gnb{
+    float:right;
+}
+
+#gnb>ul>li{
+    display:inline-block;
+    float:left;
+}
+
+#gnb>ul>li>a{
+    width:180px;
+    display:inline-block;
+    font-size:19px; 
+    color:#004385;
+    font-weight:bold;  
+    margin:40px 0;
+}
+
+/*###################2일차 시작########################*/
+
+#visual{
+    position:relative;
+
+}
+
+#visual_bottom{
+    height:50px;
+    width:100%;
+    background:rgba(0, 1, 1, 0.5);
+
+    position:absolute;
+    bottom:3px;
+
+}
+
+#visual_bottom_centerbox{
+    height:50px;
+    width:1200px;
+
+    margin:0 auto;
+    text-align: center;
+}
+
+#visual_bottom_centerbox>li{
+    display: inline-block;
+}
+
+#visual_bottom_centerbox>li>a{
+    color:#a8b4b2;
+    font-size:19px;
+    width:235px;
+    display: inline-block;
+    text-align: center;
+    line-height:50px;
+}
+
+#visual_img{
+    display: block;
+}
+
+
+
+
+
+
+#container{
+    width:1200px;
+    margin:0 auto;
+}
+
+.big_box{
+    width:50%;
+    height:920px;
+    float:left;
+}
+
+.box{
+    width:50%;
+    height:230px;
+    border: 1px solid #ececec;
+    padding:20px;
+    box-sizing:border-box;
+    float:left;
+}
+
+.box>h2{
+    font-size:23px;
+    color:#2d2d2d;
+}
+
+.box>h2>span{
+    display:block;
+    font-size:12px;
+    color:#4689e1;
+}
+
+.box>p{
+    display:block;
+    width:50%;
+    margin:30px 0 0 0;
+    font-size:12px;
+    color:#666
+
+}
+
+.box>a{
+    display:block;
+    margin:30px 0 0 0;
+    background:#81b4f2;
+    width:100px;
+    height:30px;
+    border-radius: 15px;
+    text-align:center;
+    line-height:30px;
+    color:white;
+}
+
+.box1{
+    background:url('../images/main_con_ic_01.png') no-repeat;
+    background-position:180px 100px;
+}
+
+.box2{
+    background:url('../images/main_con_ic_02.png') no-repeat;
+    background-position:180px 100px;
+}
+
+.box3{
+    background:url('../images/main_con_ic_04.png') no-repeat;
+    background-position:180px 100px;
+}
+
+.box4{
+    background:url('../images/main_con_ic_05.png') no-repeat;
+    background-position:180px 100px;
+}
+
+.box5{
+    background:url('../images/main_con_ic_06.jpg') no-repeat;
+    background-position:180px 100px;
+}
+
+.box6{
+    background:url('../images/main_con_ic_07.jpg') no-repeat;
+    background-position:180px 100px;
+}
+
+/*######################3일차 내용(box7,8)###############################*/
+
+.boxx{
+    width:50%;
+    height:230px;
+    border: 1px solid #ececec;
+    padding:20px;
+    box-sizing:border-box;
+    float:left;
+
+}
+
+.box7>dl{
+    width:100%;
+
+}
+
+.box7>dt{
+    width:70%;
+}
+
+.box7>h3{
+    margin-bottom:15px;
+    
+
+}
+.box7>dl>dt>a{
+    font-size:12px;
+    display:block;
+    color:#666;
+    float:left;
+    height:35px;
+    
+}
+
+.box7>dl>dd{
+    font-size:12px;
+    color:#666;
+    float:right;
+    margin-right:30px;
+}
+
+.box7>dl{
+    margin-top:20px;
+}
+
+.box8>h3{
+    color:#2d2d2d;
+    font:19px;
+    display:block;
+}
+
+.box8>p{
+    display:block;
+    width:50%;
+    margin-top:30px;
+    line-height:20px;
+}
+
+.box8>a{
+    margin-left:64px;
+
+    display:block;
+}
+
+
+/*<!--#########################  Big_box 2 만드는 법 ##########3###############-->*/
+
+#big_box2{
+    width:600px;
+    height:920px;
+
+    display:inline-block;
+}
+
+.boox{
+    width:300px;
+    height:415px;
+    box-sizing:border-box;
+    border:1px solid #ececec;
+    padding:20px;
+    margin-bottom:-4px;
+}
+
+.box9{
+    float:left;
+}
+
+.box10{
+    display:inline-block;
+
+}
+
+
+.box11{
+    width:600px;
+    height:505px;
+    border:1px solid #ececec;
+    box-sizing:border-box;
+    padding:20px;
+    box-sizing:border-box;
+
+}
+
+.box9>h3{
+    font-size:19px;
+    color:#2d2d2d;
+    float:left;
+    width:100%;
+    display:block;
+    margin:-5px 0 20px 0;
+
+}
+
+.boox>h3>a{
+    float:right;
+    display:inline-block;
+    height:30px;
+}
+
+.content>h3>a{
+    color:#666666;
+    font-size:12px;
+    line-height:15px;
+    width:100%;
+    font-weight:normal;
+    display:inline-block;
+
+}
+
+.box9>ul>li>img{
+    border:1px solid #ececec;
+    box-sizing:border-box;
+    margin:0 auto;
+    width:100%;
+    margin-bottom:20px;
+}
+
+.content>h4{
+    font-size:12px;
+    color:#555;
+    text-align: center;
+    margin-top:20px;
+    font-weight:normal;
+}
+
+.box10>h3{
+    margin:-5px 0 25px 0;
+}
+
+
+
+.class_review>ul>li{
+    width:259.5px;
+    height:52px;
+    border:1px solid #ececec;
+    font-size:12px;
+    color:#666;
+    box-sizing:border-box;
+    line-height:20px;
+    margin:5px 0 0 0;
+    height:50px;
+    background:white;
+    padding:5px;
+
+       
+
+}
+
+.class_review>ul>li>a{
+    color:#666;
+    float:left;
+    display:inline-block;
+    width:100%;
+
+
+}
+
+.box10{
+    background:#fafafa;
+}
+
+.class_review>ul>li>p{
+    display:inline-block;
+    float:right;
+
+}
+
+
+.box11>h3{
+    display:inline-block;
+    width:100%;
+    margin-bottom:10px;
+    
+}
+
+.box11>h3>a{
+    display:inline-block;
+    float:right;
+}
+
+.bottom_container{
+    width:1200px;
+
+}

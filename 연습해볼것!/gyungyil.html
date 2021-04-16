@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경일게임아카데미</title>
+    <link rel = "stylesheet" href="gyungyil.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="topheader">
+            <div id="topheaderbox">
+                <div id="topheader_left">
+                    <p>'게임 콘텐츠 제작'취업률 1위!</p>
+                </div>
+                <ul id="topheader_center">
+                    <li>취업현황-[트리노드] 임*진 훈련생 합격을 축하합니다.</li>
+                </ul>
+                <div id="topheader_right">
+                    <p>정규 개강일-4월4일 월요일</p> 
+                </div>
+            </div>
+        </div>
+        <div id="header">
+            <div id="logo">
+                <img src="./경일이미지/logo_new_2018.png">
+            </div>
+            <div id="gnb">
+                <ul>
+                    <li><a href="#">학교소개</li></a>
+                    <li><a href="#">교육과정</li></a>
+                    <li><a href="#">취업정보</li></a>
+                    <li><a href="#">커뮤니티</li></a>
+                    <li><a href="#">상담신청</li></a>
+                </ul>
+            </div>
+            <div id="snb" class="sub_navi" >
+                <span><img src="경일이미지/snb_img.png"></span>
+                <ul>
+                    <li><a href="#">인사말</a></li>
+                    <li><a href="#">연혁</a></li>
+                    <li><a href="#">교직원소개</a></li>
+                    <li><a href="#">시설소개</a></li>
+                    <li><a href="#">오시는길</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">과정안내</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">취업자인터뷰</a></li>
+                    <li><a href="#">취업현황</a></li>
+                    <li><a href="#">포트폴리오</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">수강후기</a></li>
+                    <li><a href="#">KI이야기</a></li>
+                    <li><a href="#">KI기자단</a></li>
+                    <li><a href="#">교수칼럼</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">상담게시판</a></li>
+                    <li><a href="#">지원하기</a></li>
+                    <li><a href="#">자주묻는질문</a></li>
+                </ul>
+            </div>
+        </div>  
+        <div id="visual">
+            <div id ="imgs">
+                <ul class="imgs_ul">
+                    <li class="fade"><img src="../images/image1.png"></li>
+                    <li class="fade"><img src="../images/image2.png"></li>
+                    <li class="fade"><img src="../images/image3.png"></li>
+                    <li class="fade"><img src="../images/image4.png"></li>
+                    <li class="fade"><img src="../images/image5.png"></li>
+                </ul>
+            </div>
+            <div id="visual_menu">
+                <ul class="visual_menu_ul">
+                    <li ><a href="#">AR/VR특화과정</a></li>
+                    <li ><a href="#">너도 될 수 있어!</a></li>
+                    <li  ><a href="#">KDT혁신교육기관</a></li>
+                    <li ><a href="#">취업율 1위</a></li>
+                    <li ><a href="#">3년우수훈련기관</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="content1">
+        </div>
+        <div id="content2">
+        </div>
+        <div id="footer">
+        </div>
+    </div>
+    <script>
+        var index=0;
+        var rolling;
+
+        banner(0);
+
+        function banner(n){
+            img=document.querySelectorAll('.imgs_ul>li');
+            
+            if(index>=img.length){
+                index=0;
+            }
+
+            if(n!=undefined){
+                index=n;
+            }
+
+
+            for(i=0; i<img.length; i++){
+                if(i==index){
+                    img.item(i).setAttribute('class', 'fade on');
+                } else{
+                    img.item(i).setAttribute('class', 'fade');
+                }
+            }
+            index++;  
+        }
+        //??????????????????????????????????????????????????????????///
+        visual=document.querySelectorAll('.visual_menu_ul');
+        visual.item(n).onclick=function(){
+            clearInterval(rolling);
+            banner(n);
+            rolling=setInterval(banner,3000);
+        }
+        rolling=setInterval(banner,3000);
+
+        
+        // SLIDER /////////////
+
+        gnb=document.querySelector('#gnb');
+        snb=document.querySelector('#snb');
+        
+        gnb.onmouseover=function(){
+            snb.setAttribute('class','snb_navi navi');
+        }
+
+        snb.onmouseover=function(){
+            snb.setAttribute('class','snb_navi navi');
+        }
+                
+        gnb.onmouseout=function(){
+            snb.setAttribute('class','snb_navi navi2');
+        }
+
+        snb.onmouseout=function(){
+            snb.setAttribute('class','snb_navi navi2');
+        }
+
+
+        
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding:0;}
+        a{text-decoration: none;}
+        ul,li{list-style: none;}
+        img{display:block;line-height:0;}
+        #banner{position:absolute;top:300px;}
+        #banner>ul>li{position:absolute;top:0;display:none;}
+        #banner>ul>li.fadein{animation:fadein 2s;}
+        @keyframes fadein{
+            from{opacity:0;}to{opacity:1;}
+        }
+        #banner>ul>li.on{display:block;}
+        #bannerBtn>ul>li{float:left;font-size: 20px; font-weight:bold;padding:20px;}
+  
+    </style>
+</head>
+<body>
+    <div id="banner">
+        <ul class="bannerImg">
+            <li class="fadein "><img src="../images/image1.png"></li>
+            <li class="fadein "><img src="../images/image2.png"></li>
+            <li class="fadein"><img src="../images/image3.png"></li>
+            <li class="fadein"><img src="../images/image4.png"></li>
+            <li class="fadein"><img src="../images/image5.png"></li>
+        </ul>
+    </div>
+    <div id ="bannerBtn">
+        <ul>
+            <li onclick="btn(0)">btn1</li>
+            <li onclick="btn(1)">btn2</li>
+            <li onclick="btn(2)">btn3</li>
+            <li onclick="btn(3)">btn4</li>
+            <li onclick="btn(4)">btn5</li>
+        </ul>
+    </div>
+    <script>
+        var index=0;
+        var rolling;
+
+        banner(0);
+        function banner(n){
+            bannerimg=document.querySelectorAll('.bannerImg>li');
+           
+            if(index>=bannerimg.length){
+                index=0;
+            }
+
+            if(n !=undefined){
+                index=n;
+            }
+
+            
+            for(i=0; i<bannerimg.length; i++ ){
+                if(i==index){
+                    bannerimg.item(i).setAttribute('class','fadein on');
+                } else{
+                    bannerimg.item(i).setAttribute('class','fadein');
+                }
+            }
+            index++;
+        }
+
+            
+            function btn(n){
+                clearInterval(rolling);
+                banner(n);
+                rolling=setInterval(banner,2000);
+            }
+
+    
+        rolling=setInterval(banner,2000);
+    </script>
+</body>
+</html>

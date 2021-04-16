@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type = "text/javascript">
+
+        
+        let setYear = 2021;
+        let setMonth = 4;
+        let setDay = 1;
+        let dt = new Date(`${setYear}-${setMonth}-${setDay}`);
+
+        console.log(dt); //Thu Apr 01 2021 00:00:00 GMT+0900 (대한민국 표준시)
+
+        //let a = new Date;
+        //console.log(a); //Thu Apr 15 2021 14:00:50 GMT+0900 (대한민국 표준시)
+
+
+
+        //날짜를 가져오는 함수 
+        let day = dt.getDate();
+        console.log(day);  //1 - Day 1 
+
+        let Month = dt.getMonth();
+        console.log(Month);  //3 
+
+        let year = dt.getFullYear();
+        console.log(year);  //2021 
+
+        let MonthTxt = String(Month).padStart(2,0);  
+        console.log(MonthTxt); //03 
+
+        let dayTxt = String(day).padStart(2,0);
+        console.log(dayTxt); 
+        
+        
+        console.log(String(year),MonthTxt,dayTxt); //2021 03 01 
+        console.log(`${String(year)} - ${MonthTxt} - ${dayTxt}`); 2-21 - 03 - 01
+
+
+        //                0    1     2      3     4     5     6
+        let arrDayStr = ['일','월', '화' , '수', '목', '금', '토'];
+        let weekDay = dt.getDay(); //해당 일에 대한 요일 나타내는 method 
+        console.log(weekDay); //4  (목요일)  return in number
+
+        console.log(arrDayStr[weekDay]); //목 이라고 뜸. 
+
+        //마지막 날짜를 가져오는 것 만들기 
+        // 필요한 이유 : 
+
+        function getLastDay(year,month){
+            let date = new Date(year,month,0);
+            return date.getDate();
+        }
+
+
+        let dt2 = new Date(setYear, setMonth,0); // 0 마지막날짜를 뽑아오는거래 
+        console.log(dt2.getDate());
+
+        let lastDay = dt2.getDate();
+        console.log(lastDay);
+
+        //변수 정리 
+        /* 
+        년도 뽑아옴
+        월 뽑아옴
+        일도 뽑아옴
+        1일이 시작하는 요일도 뽑아옴 -> 첫주 내용을 표현하기 위해 꼭 필요한 값 
+        마지막 날도 뽑아옴 28? 30? 31? 
+        */
+        
+        cal =[[1,2,3,4,5,6,7],[8,9,10,11,12,13,14],[1,2,3,4,5,6,7],[1,2,3,4,5,6,7],[1,2,3,4,5,6,7],];
+
+        for(let i=1; i<=7; i++){
+            console.log(i); // 1 2 3 4 5 6 7 이 떨어짐 
+        }
+
+        let txt = ' ';
+        for (let i=1; i<=7; i++){
+            console.log(i);
+            txt += String(i).padStart(2,0)+' ';
+        }
+        console.log(txt);
+
+
+
+        //목표 1. 1부터 30or31일 까지 7일씩 나누는 2차원 배열을 만들기 
+        //목표 2. 첫번째 배열을 시작하는 요일만큼 밀어서 만들어야함. 
+        //목표 3. 출력하기 
+        
+
+
+
+    </script>
+</body>
+</html>

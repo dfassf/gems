@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    let setYear=2021;
+    let setMonth=4;
+    let setDay=1; 
+    let dt=new Date(`${setYear}-${setMonth}-${setDay}`);
+    let arrDayStr=['일','월','화','수','목','금','토']; 
+    
+    let day = dt.getDate(); 
+    let month = dt.getMonth(); 
+    let year = dt.getFullYear(); 
+    let monthTxt = String(month+1).padStart(2,0);
+    let dayTxt = String(day).padStart(2,0);
+    
+    // console.log(`${String(year)}-${monthTxt}=${dayTxt}`); 
+    let weekDay = dt.getDay(); //0 이 일요일  6이 토요일 
+    // console.log(arrDayStr[weekDay]);
+
+    //마지막 날짜를 가져오는 것 
+    let dt2=new Date(setYear,setMonth,0);
+    let lastDay = dt2.getDate(); 
+    // console.log(lastDay);
+    
+    let txt=''; 
+    for(let i=1; i<=7; i++){
+        // console.log(i); 
+        txt+=String(i)+'';
+    }
+
+    ///////////////달력그리기//////////////////////////////////////////////////////////////////////////////////////////
+    function makeCalender(y,m){ 
+        let calender=[]; 
+        let newCalender=[]; 
+        let start = new Date(y,m-1,1);
+        // console.log(start); 
+        let end = new Date(y,m,0);
+        // console.log(end); 
+        let dayOfWeek=start.getDay(); 
+        let endDay =end.getDate();
+        // let prevMonth = new Date(y,m-1,0);
+        // // console.log(prevMonth); 
+        // let prevEndDay=prevMonth.getDate();
+        
+        //Date(y,m,d) month부분이 이상하게 찍힐 때가 있음. console.log로 확인. 
+        //배열에 m월 1일부터 마지막 날 까지 넣는다. 
+        for(let i=0; i<endDay; i++){
+            calender[i]=String(i+1).padStart(2,0); 
+        }
+        // 배열 앞쪽에 이전 달의 마지막 날짜부터 -1하면서 차례대로 넣는다. 
+        for(let j=0; j<dayOfWeek; j++){
+            // calender.unshift(String(prevEndDay));
+            // prevEndDay--; 
+            calender.unshift("  "); //빈칸 넣기 
+        }
+        // 달력이 꽉 차지 않으면 마지막 날에 다음 달 달력도 넣는다. 
+        if(calender.length%7!=0){ 
+            nextDay =7-calender.length%7; 
+            for(let k=1; k<=nextDay; k++){
+                // calender.push(String(k).padStart(2,0)); 
+                calender.push("  ");// 빈칸 넣기 
+            }
+        }
+        // 이전달 이번달 다음달의 날짜가 모두 포함된 배열(calender)을 7칸씩 나눠서 새로운 배열(newCalender)에 담아준다. 
+        for(let l=0; l<calender.length/7; l++){
+            newCalender[l]='';
+            for(let n=(l*7); n<(l*7)+7; n++){ 
+                newCalender[l]+=calender[n]+" "; 
+            }
+        }
+        //콘솔창에 찍기. 
+        console.log(y+'년'+m+'월');
+        console.log("일 월 화 수 목 금 토")
+        for(m=0; m<newCalender.length; m++){
+        console.log(newCalender[m]);
+        }
+        console.log(""); //월별로 띄워쓰기 위함 
+    }
+    makeCalender(2016,2); 
+    makeCalender(2016,3); 
+    makeCalender(2016,4); 
+    makeCalender(2016,5); 
+    makeCalender(2016,6); 
+
+
+    </script>
+</body>
+</html>

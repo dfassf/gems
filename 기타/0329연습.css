@@ -1,0 +1,102 @@
+/* CSS Style sheet */
+
+*{margin:0;padding:0;}
+ul,li{list-style: none;}
+a{text-decoration: none;}
+img{display:block;line-height:0;}
+
+#wrap{
+    width:100%;
+    background:darkgray;
+}
+
+#header_wrap{
+    width:100%;
+   /* height:300px;*/
+    background:red;
+}
+
+#header{
+    width:1200px;
+    height:100px;
+    background:blue;
+    margin:0 auto;  
+}
+
+#snb_wrap{
+    width:100%;
+    height:200px;
+    background: yellow;
+    position:absolute;
+    z-index:3;
+}
+
+#snb{
+    width:1200px;
+    margin:0 auto;
+    height:200px;
+    background:coral;
+}
+
+#visual_wrap{
+    width:100%;
+    background:darkcyan;
+  /*  height:500px;*/
+}
+
+#visual{
+    width:1920px;
+    height:500px;
+    margin:0 auto;
+    background:tomato;
+    position:relative;
+    z-index:1;
+}
+
+/*/////////////////contents////////////////*/
+
+#contents{
+    width:1200px;
+    height:600px;
+    background:darkgoldenrod;
+    margin:0 auto;
+
+}
+
+.interview_content{
+    width:300px;
+    position:relative;
+    height:500px;
+    overflow:hidden;
+    background:darkgreen;
+}
+
+.interview_content>li{
+    position:absolute;
+    top:0;
+    display:none;
+}
+
+.interview_content>li>img{
+    width:238px;
+    height:158px;
+}
+
+
+.interview_content>li.in{
+    display:block;
+    animation:slider1 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes slider1{
+    from{left:238px;}to{left:0;}
+}
+
+.interview_content>li.out{
+    display:block;
+    animation:slider2 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes slider2{
+    from{left:0px;}to{left:-238px;}
+}

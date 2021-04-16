@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        let arr = ['happiness', 'dreams', 'health', 'family'];
+        let result = [];
+        let result2 = [];
+
+        result = arr.map((v)=>{
+            return `${v}3`;  // = v+3;
+        });
+        console.log(result); //(4) ["happiness3", "dreams3", "health3", "family3"]
+
+
+        result2 = result.map((v)=>{
+            return v;
+        });
+        console.log(result2); //(4) ["happiness3", "dreams3", "health3", "family3"]
+
+        
+        let array = ['book', 'pen', 'laptop', 'notebook'];
+        let array2 = [];
+        let array3 = [];
+        let results = [];
+        
+        results = array.map((v)=>{
+            return v.length;
+        });
+        console.log(results); //(4) [4, 3, 6, 8]
+
+        array.forEach((v)=>{
+             array3.push(v.length);
+        });
+        console.log(array3); //(4) [4, 3, 6, 8]
+
+        array2 = arr.map((v,i)=>{
+            return v+(i+1);
+        });
+        console.log(array2); //(4) ["happiness1", "dreams2", "health3", "family4"]
+        
+        
+        let hero = ['hero','hero','hero','hero','hero'];
+        let heros = [];
+
+        heros = hero.map((v,i)=>{
+            return v+(i);
+        });
+        console.log(heros); //(5) ["hero0", "hero1", "hero2", "hero3", "hero4"]
+
+        let arrays = ['melong' ,'Iamgood', 'howyoudoing'];
+        let arrays1 = [];
+        let arrays2 = [];
+
+        // forEach // map
+
+        arrays1 = arrays.map((v)=>{
+            return v.length;
+        });
+    
+        arrays.forEach((v)=>{
+            arrays2.push(v.length);    //그냥 arrays2 = v.length; 하면 마지막 값만 입력됨 push! 써주기 
+        });
+
+        console.log(arrays1, arrays2);
+        
+        
+
+        // padStart & padEnd 
+
+        let num = ['1','2','3','4','5','6','7','8','9','10'];
+        let num_result = [];
+        let num_result2 = [];
+
+        num_result = num.map((v,i)=>{
+            return String(v).padStart(2,0);
+        });
+        console.log(num_result); //(10) ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"]
+
+        num.forEach((v,i)=>{
+            num_result2.push(String(v).padStart(2,0));
+        });
+        console.log(num_result2); //(10) ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"]
+
+        // 또 push를 까먹음.. 
+
+        console.log('1'==1);  //T
+        console.log('1'===1);  //F
+
+        console.log('GREAT'.padEnd(12,'!YES!')); //GREAT!YES!!Y
+        //padEnd 는 (글자수, 빈칸에 채울것)
+
+
+
+
+// pwd / 내 현재 위치 어디냐 
+
+// ls/ 현재 위치한 폴더에 파일들이 뭐뭐잇냐 
+
+// cd / 디렉토리 이동 시 사용 
+
+// mkdir / 폴더 만드는 명령어  / 사용법    mkdir [폴더명] 
+
+// rmdir / 폴더 삭제하는 명령어  / 사용법 mkdir [폴더명]
+
+// vi / 편집기 - 
+
+// 파일이 없는 상태에서 vi index2.html 쓰면 파일이 생성됨
+
+// 파일이 있는 상태에서 vi index2.html 을 쓰면 파일을 염 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </script>
+</body>
+</html>

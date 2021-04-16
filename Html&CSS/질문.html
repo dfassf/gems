@@ -1,0 +1,64 @@
+
+질문 1. 
+
+block인 ul,li를 inline으로 만들기 위해 아래 ul > li 를 씀
+> 이 쓰이는 이유는??
+
+<style>
+    ul > li{
+        display:inline;
+    }
+</style>
+
+
+
+
+질문 2. background:url('../../images/~'>)
+url 의미 / ' ' 쓰는 이유 
+-> 값 넣을 땐 string 글자 형인가 아닌가 구분 css 에서 '' 안넣어도 처리 되긴함 
+" " ' ' -> 둘다 됨. 
+
+질문 3.                 <li class = "boxx box7">
+    <h3>
+        공지사항
+    </h3>
+    <dl>
+        <dt>
+            <a href = "#">
+                -3월 블록체인반 모집 임박
+            </a>
+        </dt>
+
+    }
+    .box7>dl>dt>a{
+        font-size:12px;
+        display:block;
+        color:#666;
+        float:left;
+        height:40px;  -> 여기서 height 는 a에만 줬는데 왜 dd도 같이?
+        
+    }       
+
+    a는 인라인이라서 inline-block을 주어야 한다. 
+    즉 블록으로 만드는 거 ? 
+
+
+질문 4. 
+<div id = "big_box2">
+    <div class = "boox box9">
+        <h3>
+            취업자인터뷰
+            <a href = "#"><img src="./commons/images/btn_more.gif"></a>
+        </h3>
+
+        취업자 인터뷰 사진 중앙 정렬 
+        <a><img></a> text-align , margin: 0 auto; 다 안됨 
+
+
+
+line-height:글자 간격의 높이 
+
+
+
+질문 5. iframe의 크기 조정은.... html iframe 안에 width, height로만 가능 한 
+것 인가 css 에서 하는 방법 찾기 

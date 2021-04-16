@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script type="text/javascript">
+            // MAPPING 실전 예제 price 값 콤마 처리 
+
+            const items = [
+            {
+                id:1,
+                name:'맥북',
+                price:2930000
+            },
+            {
+                id:2,
+                name:'아이패드',
+                price:800000
+            },
+            {
+                id:3,
+                name:'아이폰',
+                price:450000
+            },
+        ];
+
+        const newItems = items.map(item =>{
+            return{
+                ...item,
+                price:item.price.toLocaleString()  
+            }
+        });
+    // 질문1.  ...item 에서 모든 요소들이 복사된건데 
+    // price:item.price.toLocaleString ?
+    
+    
+    </script>
+</body>
+</html>

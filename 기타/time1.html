@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo{
+            border-top:100px solid darkgreen;
+            border-left:10px solid darkblue;
+            height: 10000px;
+            background-color: darkkhaki;
+        }
+        
+        @keyframes grow{
+            from{font-size: 0px;}
+            to{font-size: 40px;}
+        }
+        .grow:hover{
+            animation-name:grow;
+            animation-duration: 5s;
+        }
+        .demo:hover .stay{
+            animation-name: grow;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+            
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="demo">
+        <div class="grow">
+            이 글씨는 점점 더 커집니다.
+        </div>
+        <div class="stay">
+            이 글씨는 커지며 커진 상태를 유지합니다.
+        </div>
+    </div>
+
+</body>
+</html>

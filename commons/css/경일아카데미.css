@@ -1,0 +1,418 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+a{
+    text-decoration:none;
+
+}
+
+ul,li{
+    list-style:none;
+}
+
+#wrap{
+    width:100%
+}
+
+#header{
+    width:1200px;
+    height:100px;
+    margin:0 auto;
+}
+
+#logo{
+    margin:20px 0 0 0;
+    float:left;
+}
+
+#gnb{
+    float:right;
+}
+
+#gnb>ul>li{
+    float:left;
+    display:inline-block;
+}
+
+#gnb>ul>li>a{
+    display:inline-block;
+    width:180px;
+    margin:40px 0;
+    font-weight:bold;
+    font-size:19px;
+    color:#004385}
+
+/*##############################*/
+
+#visual{
+    position:relative;
+}
+
+#visual>img{
+    display:block;
+}
+
+#visual_bottom_box{
+    width:1920px;
+    height:50px;
+    background:rgba(0, 1, 1, 0.5);
+
+    position:absolute;
+    bottom:0;
+}
+
+#visual_bottom_centerbox{
+    margin:0 auto;
+    width:1200px;
+    height:50px;
+    text-align: center;
+}
+
+#visual_bottom_centerbox>li{
+    display:inline-block;
+}
+
+#visual_bottom_centerbox>li>a{
+    display:inline-block;
+    height:50px;
+    color:white;
+    padding:15px 40px;
+    box-sizing:border-box;
+    font-size:18px;
+}
+
+
+#container{
+    width:1200px;
+    margin:30px auto 0 auto;
+    height:920px;
+}
+
+.big_box{
+    width:50%;
+    float:left;
+}
+
+.box{
+    width:50%;
+    height:230px;
+    border:1px solid #ececec;
+    box-sizing:border-box;
+    float:left;
+    padding:20px;
+}
+
+.box>h2{
+    font-size:23px;
+    color:#2d2d2d;
+}
+
+.box>h3{
+    color:#2d2d2d;
+}
+
+.box>h2>span{
+    font-size:12px;
+    display:block;
+    color:#4689e1;
+}
+
+.box>p{
+    width:50%;
+    margin:40px 0 0 0;
+    font-size:13px;
+}
+
+.box>a{
+    display:block;
+    margin:30px 0 0 0;
+    width:100px;
+    height:30px;
+    background:#6da6ea;
+    color:white ;
+    border-radius: 15px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.box1{
+    background:url('../../images/main_con_ic_01.png') no-repeat;
+    background-position:180px 100px;
+}
+
+.box2{
+    background:url('../../images/main_con_ic_02.png') no-repeat;
+    background-position:180px 100px;
+}
+
+.box3{
+    background:url('../../images/main_con_ic_04.png') no-repeat;
+    background-position:180px 100px;
+}
+
+.box4{
+    background:url('../../images/main_con_ic_05.png') no-repeat;
+    background-position:180px 100px;
+}
+
+.box5{
+    background:url('../../images/main_con_ic_06.jpg') no-repeat;
+    background-position:180px 100px;
+}
+
+.box6{
+    background:url('../../images/main_con_ic_07.jpg') no-repeat;
+    background-position:180px 100px;
+}
+
+
+.box>h5{
+    color:grey;
+    height:10px;
+    margin-top:30px;
+    float:left;
+    font-size:12px;
+    width:90%;
+    
+}
+
+.box>h5>dd{
+    float:right;
+    font-size:12px;
+}
+
+a:link{
+    text-decoration:none;
+}
+
+.btn{
+    border:white;
+    margin-left: 65px;
+
+}
+
+.box8>h3{
+    margin-bottom:0px;
+    height:10px;
+
+}
+
+a:visited{
+    text-decoration:none;
+    color: grey;
+}
+
+.box7>h5>a{
+    color:grey;
+
+}
+
+.box8>p{
+    margin-bottom:30px;
+}
+
+#big_box2{
+    width: 50%;
+    display:inline-block;
+}
+
+#box9,#box10,#box11{
+    border:1px solid #ececec;
+    box-sizing:border-box;
+    padding:20px;
+
+    
+}
+#box9{
+    width:50%;
+    float:left;
+    height:415px;
+}
+
+
+#box10{
+    width:50%;
+    float:left; 
+    height:415px;
+    background-color: #fafafa;
+}
+
+#box11{
+    width:100%;
+    height:505px;
+    float:left;
+}
+
+#box9>span{
+    border:1px solid #ececec;
+    display:block;
+    margin-top: 20px;
+}
+
+#box9>p{
+    text-align:center;
+    margin-top: 20px;
+
+    font-size:12px;
+    color:gray;
+}
+#box9>p>a{
+    color:gray;
+}
+
+#box9>h3>span{
+    float:right;
+}
+
+.review{
+    margin-top: 20px;
+}
+
+.review>li{
+    width:260px;
+    height:45px;
+    background-color: #fff;
+    margin: 5px auto 5px auto;
+    border: 1px solid #ececec;
+}
+#box10>h3>span{
+    float:right;
+}
+
+.review>li>p{
+    float: left;
+    display: block;
+}
+
+.review>li>span{
+    float: right;
+    display: block;
+}
+
+#box11>h3>span{
+    float:right;
+}
+
+#box11>iframe{
+    margin-top: 20px;
+}
+
+#big_box3{
+    width:1200px;
+    height: 510px;
+    margin: 0 auto;
+}
+
+.boox{
+    width:390px;
+    height:430px;
+    border: 1px solid #ececec;
+    float:left;
+    margin:30px 0 0 0;
+    padding:20px;
+    box-sizing: border-box;
+}
+
+.box12{
+    background-color: #fafafa;
+    background:url('../images/main_bbs_ic_01.png') no-repeat;
+    background-position: 300px 12px;
+}
+
+.box13{
+    margin:30px 15px 0 15px;
+    background:url('../images/main_bbs_ic_02.png') no-repeat;
+    background-position: 300px 12px;
+}
+
+.box14{
+    background-color: #fafafa;
+    background:url('../images/main_bbs_ic_03.png') no-repeat;
+    background-position: 300px 12px;
+}
+
+.boox>h2>span{
+    font-size:12px;
+    display:block;
+    color:#4689e1;
+}
+
+.boox>h2{
+    margin-bottom:20px;
+}
+
+.boox>p{
+    color:#666;
+    font-size:12px;
+
+}
+
+.boox>p>span{
+    display:block;
+    text-align:center;
+    margin: 10px auto 20px auto;
+
+}
+
+.footer{
+    width: 100%;
+    height: 200px;
+    padding:20px 0;
+    margin-top:30px;
+    background-color: #323232;
+
+}
+
+#footer2{
+    margin: 0 auto;
+    width:1200px;
+    height:130px;
+
+}
+
+#gnb2{
+    float:left;
+    display:block;
+}
+
+#gnb2>ul>li{
+    float:left;
+    display:inline-block;
+    
+}
+
+#gnb2>ul>li>a{
+    display:inline-block;
+    font-size:12px;
+    padding:0 10px;
+    margin-left:18px;
+    font-weight:bold;
+}
+
+#gnb2 > ul > li > a:hover{ /* a 태그에 마우스가 올라갈떄 어떻게 css가 바꿀거냐?*/
+    color:#fff;
+}
+
+#gnb2 > ul > li:after {
+    content:" | ";
+    color:#555;
+    font-size:11px;
+}
+
+.mt-l5{
+    margin-left:5px !important;
+}
+
+#gnb2 > ul > li:last-child:after{
+    content:"";
+}
+
+#logo2{
+    float:left;
+}
+
+.boox>p>a{
+    color:#666;
+}
